@@ -1,0 +1,149 @@
+body {
+  overflow-x: hidden;
+}
+
+#sidebar {
+  background-color: #f1f1f1;
+  min-height: 100vh;
+  transition: all 0.3s;
+  position: fixed;
+  z-index: 1000;
+  width: 250px;
+}
+
+#sidebar.collapsed {
+  width: 60px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #f8f9fa;
+  text-align: center;
+  cursor: pointer;
+}
+
+#sidebar img {
+  max-width: 120px;
+  margin: 0 auto 20px;
+  transition: all 0.3s;
+}
+
+#sidebar.collapsed img {
+  max-width: 40px;
+  margin: 0 auto 10px;
+}
+
+.nav-link {
+  padding: 10px 15px;
+  color: #333;
+  transition: all 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#nav-link-active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.nav-link:hover {
+  background: #e9ecef;
+  color: #da71ac;
+}
+
+.nav-link span {
+  margin-left: 10px;
+  transition: opacity 0.3s;
+}
+
+#sidebar.collapsed .nav-link span {
+  opacity: 0;
+  display: none;
+}
+
+#content {
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+#content.expanded {
+  width: calc(100% - 60px);
+}
+
+.col-12 {
+  margin-top: 70px;
+}
+@media (max-width: 768px) {
+  #sidebar {
+    width: 60px;
+  }
+
+  #sidebar.expanded {
+    width: 250px;
+  }
+
+  #content {
+    width: calc(100% - 60px);
+  }
+
+  #content.sidebar-expanded {
+    width: calc(100% - 250px);
+  }
+
+  #sidebar img {
+    max-width: 40px;
+    margin: 0 auto 10px;
+  }
+
+  #sidebar.expanded img {
+    max-width: 120px;
+    margin: 0 auto 20px;
+  }
+
+  #sidebar .nav-link span {
+    opacity: 0;
+    display: none;
+  }
+
+  #sidebar.expanded .nav-link span {
+    opacity: 1;
+    display: inline;
+  }
+}
+
+.table-container {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom {
+  background: #da71ac;
+  color: white;
+}
+
+.btn-custom:hover {
+  background: #9e5980;
+  color: white;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+.container-fluid p-4{
+    position:absolute;
+}
+.container-fluid {
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
